@@ -1001,7 +1001,7 @@ $essentialtweaks.Add_Click({
         New-Item -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" -Force | Out-Null
     }
 
-Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" -Name "HideSCAMeetNow" -Type DWord -Value 1
+	Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" -Name "HideSCAMeetNow" -Type DWord -Value 1
 
     Write-Host "Removing AutoLogger file and restricting directory..."
     $autoLoggerDir = "$env:PROGRAMDATA\Microsoft\Diagnosis\ETLLogs\AutoLogger"
@@ -1031,7 +1031,7 @@ Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Policies
     "RemoteRegistry"                               # Remote Registry
     "SharedAccess"                                 # Internet Connection Sharing (ICS)
     "TrkWks"                                       # Distributed Link Tracking Client
-    #"WbioSrvc"                                     # Windows Biometric Service (required for Fingerprint reader / facial detection)
+    "WbioSrvc"                                     # Windows Biometric Service (required for Fingerprint reader / facial detection)
     #"WlanSvc"                                      # WLAN AutoConfig
     "WMPNetworkSvc"                                # Windows Media Player Network Sharing Service
     #"wscsvc"                                       # Windows Security Center Service
@@ -1087,9 +1087,9 @@ Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Policies
     #"BluetoothUserService_48486de"                  #Disbales BluetoothUserService_48486de (The Bluetooth user service supports proper functionality of Bluetooth features relevant to each user session.)
     "WpnService"                                    #Disables WpnService (Push Notifications may not work )
     #"StorSvc"                                       #Disables StorSvc (usb external hard drive will not be reconised by windows)
-    "RtkBtManServ"                                  #Disables Realtek Bluetooth Device Manager Service
-    "QWAVE"                                         #Disables Quality Windows Audio Video Experience (audio and video might sound worse)
-     Hp services
+    #"RtkBtManServ"                                  #Disables Realtek Bluetooth Device Manager Service
+    #"QWAVE"                                         #Disables Quality Windows Audio Video Experience (audio and video might sound worse)
+    "Hp services"
     "HPAppHelperCap"
     "HPDiagsCap"
     "HPNetworkCap"
@@ -1633,7 +1633,6 @@ $ECortana.Add_Click({
 })
 
 $HTrayIcons.Add_Click({
-
 	Write-Host "Hiding tray icons..."
 	Set-ItemProperty -Path "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer" -Name "EnableAutoTray" -Type DWord -Value 1
 	Write-Host "Done - Hid Tray Icons"
