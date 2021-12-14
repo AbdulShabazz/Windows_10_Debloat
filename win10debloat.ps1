@@ -829,7 +829,7 @@ $gimp.Add_Click({
 })
 
 $essentialtweaks.Add_Click({
-    Write-Host "Creating Restore Point incase something bad happens"
+    Write-Host "Creating Restore Point in case something bad happens"
     $ResultText.text = "`r`n" +"`r`n" + "Installing Essential Tools... Please Wait" 
     Enable-ComputerRestore -Drive "C:\"
     Checkpoint-Computer -Description "RestorePoint1" -RestorePointType "MODIFY_SETTINGS"
@@ -1452,7 +1452,7 @@ $removebloat.Add_Click({
     Write-Host "Removing Bloatware"
 
     foreach ($Bloat in $Bloatware) {
-        Get-AppxPackage -Name $Bloat| Remove-AppxPackage
+        Get-AppxPackage -Name $Bloat | Remove-AppxPackage
         Get-AppxProvisionedPackage -Online | Where-Object DisplayName -like $Bloat | Remove-AppxProvisionedPackage -Online
         Write-Host "Trying to remove $Bloat."
         $ResultText.text = "`r`n" +"`r`n" + "Trying to remove $Bloat."
@@ -1836,3 +1836,11 @@ $windowsupdatefix.Add_Click({
 })
 
 [void]$Form.ShowDialog()
+
+#winget install -e --id 7zip.7zip
+#winget install -e --id RARLab.WinRAR
+#winget install -e --id LLVM.LLVM
+#winget install -e --id Microsoft.VisualStudio.Enterprise
+#winget install -e --id Microsoft.VisualStudio.Professional
+#winget install -e --id Microsoft.VisualStudio.BuildTools
+#winget install -e --id Google.Chrome
