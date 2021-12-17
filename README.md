@@ -11,7 +11,7 @@ This script is the culmination of many scripts and gists from github with featur
 - Semi-configurable
 
 ## How to Run
-Paste this command into Powershell (admin):
+Run the following Powershell as admin:
 ```
-win10debloat.ps1 (command-line)
+win10debloat.ps1  
 ```
