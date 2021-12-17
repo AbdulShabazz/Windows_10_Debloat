@@ -1420,6 +1420,7 @@ $Bloatware = @(
     "*Duolingo-LearnLanguagesforFree*"
     "*PandoraMediaInc*"
     "*CandyCrush*"
+    "*Disney*"
     "*BubbleWitch3Saga*"
     "*Wunderlist*"
     "*Flipboard*"
@@ -1438,6 +1439,8 @@ $Bloatware = @(
     "*Hulu*"
     "*HiddenCity*"
     "*AdobePhotoshopExpress*"
+    "*WavesAudio.WavesMaxxAudio*"
+    "*Spotify*"
 
     #Optional: Typically not removed but you can if you need to for some reason
     "*Microsoft.Advertising.Xaml*"
